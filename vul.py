@@ -3,12 +3,13 @@
 import socket
 import os
 import sys
+import getpass
 
 
 def retBanner(ip,port):
 	try:
 		socket.setdefaulttimeout(2)
-		s = socket.socket()
+		s = socket.socket() 
 		s.connect((ip,port))
 		banner = s.recv(1024)
 		return banner
